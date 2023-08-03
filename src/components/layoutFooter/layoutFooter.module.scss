@@ -1,0 +1,29 @@
+@import '../../assets/styles/mixins';
+
+.footer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1;
+  justify-content: flex-end;
+  padding: 0;
+  margin-bottom: 4rem;
+  width: 100%;
+  z-index: var(--z-footer);
+  gap: 18px;
+
+  @include smUp {
+    font-size: .875rem;
+    padding: 4rem 0 2rem;
+    margin-bottom: 0;
+  }
+}
+
+.hoobeIcon {
+  border-radius: 50%;
+  background-color: var(--button-text-color);
+  color: var(--button-bg-color);
+  padding: 3px;
+  width: 24px;
+  height: 24px;
+}

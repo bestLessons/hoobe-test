@@ -1,0 +1,91 @@
+:root {
+  --primary-font: "Poppins","Roboto","Helvetica",sans-serif;
+  --transition: .2s ease-in-out;
+
+  /* Colors */
+  --body-background: #f3f3f3;
+  --layout-background: #fff;
+  --black: #000;
+  --white: #fff;
+  --white-font: #fff;
+  --profile-name-color: #000;
+  --media-card-overlay-gradient: linear-gradient(180deg,transparent 0%,var(--black) 130%);
+  --primary: #78c4cb;
+  --primary-dark: #1096a5;
+  --light-gray: #cacaca;
+  --med-gray: #848484;
+  --card-box-shadow: hsla(190, 4%, 74%, 0.18);
+
+  /* Sizes */
+  --max-content-width: 41.5rem;
+  --layout-border-radius: 40px;
+  --layout-top-padding: 1rem;
+  --layout-bottom-padding: 4.5rem;
+  --layout-horizontal-padding: 4.5rem;
+  --social-link-size: 2.5rem;
+
+  /* Font size */
+  --font-size-h4: 1.375rem ;
+  --font-size-m: 0.875rem;
+  --font-size-s: 0.75rem;
+
+  /* Border radius */
+  --border-radius: 12px;
+  --social-link-border-radius: 50%;
+  --media-card-border-radius: 0.75rem;
+}
+
+@media only screen and (max-width: 767px) {
+  :root {
+    --max-content-width: 33.75rem;
+    --body-background: #fff;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Colors */
+    --body-background: #121212;
+    --layout-background: #282828;
+    --black: #fff;
+    --white: #000;
+    --white-font: #fff;
+    --profile-name-color: #fff;
+    --media-card-overlay-gradient: linear-gradient(180deg,transparent 0%,#000 130%);
+    --primary: #78c4cb;
+    --primary-dark: #1096a5;
+    --light-gray: #cacaca;
+    --med-gray: #848484;
+    --card-box-shadow: hsl(0deg 0% 0% / 38%);
+    
+  } 
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+body {
+  background: var(--body-background);
+  user-select: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}

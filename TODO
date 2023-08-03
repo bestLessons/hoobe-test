@@ -1,0 +1,1 @@
+1. On original website there is no overflow:hidden on the card link -> so because of that ::before element which provides gradient under the title of the card is visible when page loads and it doesn't look great

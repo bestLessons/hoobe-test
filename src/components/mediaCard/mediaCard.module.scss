@@ -1,0 +1,102 @@
+.card {
+  background-color: var(--black);
+  border-radius: var(--media-card-border-radius);
+  box-shadow: 0 1rem 3rem var(--card-box-shadow);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s cubic-bezier(0.74, -0.18, 0.3, 0.48),
+    background-color 1.5s ease-in-out;
+  position: relative;
+  max-width: unset;
+  margin: 0;
+  width: 100%;
+  padding: 56.25% 0 0;
+  z-index: 0;
+  color: var(--white-font);
+  overflow: hidden;
+
+  &::before {
+    background: var(--media-card-overlay-gradient);
+    border-bottom-left-radius: var(--media-card-border-radius);;
+    border-bottom-right-radius: var(--media-card-border-radius);;
+    bottom: 0;
+    content: "";
+    height: 5rem;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    transition: background 0.8s ease-in-out;
+    pointer-events: none;
+    z-index: 3;
+  }
+}
+
+.mediaItem {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: var(--media-card-border-radius);
+  overflow: hidden;
+}
+
+.image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: var(--media-card-border-radius);
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position: bottom;
+  transform: scale(1.1);
+  transition: transform var(--transition);
+
+  .card:hover & {
+    transform: scale(1);
+    
+  }
+}
+
+.contentContainer {
+  padding: 1.5rem;
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  transition: padding var(--transition);
+
+  .card:hover & {
+    padding: 0.5rem;
+  }
+}
+
+.title {
+  max-width: 70%;
+  color: var(--white-font);
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  margin: 0;
+  max-width: 80%;
+  overflow-wrap: break-word;
+}
+
+.player {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: var(--media-card-border-radius);
+}

@@ -1,0 +1,8 @@
+export enum SOCIAL_PLATFORM {
+  INSTAGRAM = 0,
+  YOUTUBE = 2,
+  TIKTOK = 6,
+  TWITTER = 7,
+  HOOBE = 28,
+  THREADS = 59,
+}

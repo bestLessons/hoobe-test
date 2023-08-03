@@ -1,0 +1,118 @@
+@import "../../assets/styles/mixins";
+
+.button {
+  @include button-reset;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 6px;
+  border-radius: 12px;
+  transition: var(--transition);
+  position: relative;
+  transition: all 0.12s ease-in-out;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  &.loading {
+    color: transparent !important;
+
+    img {
+      visibility: hidden;
+    }
+  }
+}
+
+.primaryColor {
+  --button-bg-color: var(--primary);
+  --button-text-color: var(--white);
+  
+  background: var(--button-bg-color);
+  color: var(--button-text-color);
+  outline: none;
+  font-weight: 700;
+
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  align-items: center;
+  border: 0;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  
+
+  border-radius: 0.625rem;
+
+  height: auto;
+
+  &:hover {
+    --button-bg-color: var(--primary-dark);
+    --button-text-color: var(--white);
+
+    background-color: var(--primary-dark);
+    color: var(--white);
+  }
+
+  &.textStyle {
+    background-color: transparent;
+    color: var(--light-gray);
+    text-decoration: none;
+    
+    
+
+    &:hover {
+      text-decoration: underline;
+      background-color: transparent;
+
+      .text {
+        color: var(--primary);
+      }
+    }
+
+    .text {
+      color: var(--med-gray);
+    }
+    
+  }
+}
+
+.text {
+  transition: all 0.12s ease-in-out;
+}
+
+
+
+
+
+.xsSize {
+  height: 29px;
+  font-size: var(--font-size-m);
+  padding: .25rem .75rem
+}
+.sSize {
+  height: 38px;
+  font-size: var(--font-size-m);
+  padding: 0.3rem 1rem;
+}
+
+.mSize {
+  height: 40px;
+  font-size: var(--font-size-m);
+  padding: 0.5rem 1.875rem;
+}
+
+.rounded {
+  border-radius: 50%;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.append,
+.prepend {
+  display: flex;
+}
